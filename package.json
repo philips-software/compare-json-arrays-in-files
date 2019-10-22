@@ -1,0 +1,63 @@
+{
+  "name": "compare-json-arrays-in-files",
+  "version": "1.0.0",
+  "description": "Compares the contents of two JSON files as provided in the command line. Unlike other tools that provide a diff-like view in one file, and instead of comparing the contents of files side-by-side using a diff text tool, compare-json-arrays-in-files provides a clear overview of the common parts and deltas (to three output files), taking into consideration that the order of elements to be compared may be different between files.",
+  "main": "index.js",
+  "author": "Sanda Contiu <sanda.contiu@philips.com>",
+  "license": "MIT",
+  "scripts": {
+    "compareJsonFiles": "node ./src/indexCompareJsonFiles.js",
+    "lint": "yarn standard",
+    "lint:fix": "yarn standard --fix",
+    "test": "jest src --passWithNoTests",
+    "coverage": "jest --coverage src --passWithNoTests"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**.js",
+      "src/**/*.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/index.js",
+      "!**/*.test.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**",
+      "**/public/**"
+    ],
+    "envs": [
+      "es6",
+      "browser",
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "jest": "^24.1.0",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.1.0"
+  },
+  "keywords": [
+    "json",
+    "array",
+    "arrays",
+    "compare",
+    "comparer",
+    "delta",
+    "deltas",
+    "json arrays comparer",
+    "json arrays delta"
+  ]
+}
