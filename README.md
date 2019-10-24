@@ -12,8 +12,6 @@ __Note__: contents of these output files is sorted as follows:
   - keys in each element of the array are sorted alphabetically
   - elements in the array are sorted by their string representation.
 
-__Note__: currently only supporting flat JSON objects (no nested structures)
-
 ### Why was this needed?
 Unlike other tools that provide a diff-like view in one file, and instead of comparing the contents of files side-by-side using a diff text tool, Compare-Json-Arrays-In-Files provides a clear overview of the common parts and deltas (to three output files), taking into consideration that the order of elements to be compared may be different between files.
 
@@ -45,6 +43,9 @@ This overview is very useful especially when the two files contain hundreds or m
 
 ### Status
 v1.0.0, see [CHANGELOG.md](./CHANGELOG.md)
+
+### Limitations
+- currently only supporting flat JSON objects (no nested structures)
 
 ### Prerequisites
 - you should have Node installed (this script was tested with node v12.2.0)
