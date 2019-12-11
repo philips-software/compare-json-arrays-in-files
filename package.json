@@ -17,7 +17,7 @@
       "src/**.js",
       "src/**/*.js",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/indexCompareJsonFiles.js",
       "!**/*.test.js"
     ],
     "setupFilesAfterEnv": [
